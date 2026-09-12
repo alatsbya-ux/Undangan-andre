@@ -1,0 +1,1025 @@
+/* =========================================================
+   WEDDING INVITATION
+   SESSION 1
+   ANDRE & INTAN
+
+   THEME:
+   NAVY - GOLD
+
+   BACKGROUND:
+   SINGLE STATIC IMAGE
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+  --navy:
+    #071827;
+
+  --gold:
+    #e1ba60;
+
+  --gold-light:
+    #f3d993;
+
+  --cream:
+    #f7f0df;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+  width: 100%;
+
+  min-height: 100%;
+
+}
+
+
+body {
+
+  background:
+    var(--navy);
+
+  color:
+    var(--cream);
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
+  overflow-x:
+    hidden;
+
+}
+
+
+/* =========================================================
+   SESSION 1
+========================================================= */
+
+.opening {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  min-height:
+    100dvh;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  overflow:
+    hidden;
+
+
+  /*
+    ======================================================
+    BACKGROUND UTAMA
+
+    HANYA SATU GAMBAR
+    TIDAK DOUBLE
+    TIDAK FADE
+    TIDAK BERPUTAR
+    TIDAK ADA BACKGROUND TAMBAHAN
+    ======================================================
+  */
+
+  background-image:
+    url("assets/Background.png");
+
+  background-size:
+    cover;
+
+  background-position:
+    center center;
+
+  background-repeat:
+    no-repeat;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.invitation-content {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  width:
+    min(90%, 560px);
+
+  min-height:
+    100svh;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  text-align:
+    center;
+
+  padding:
+    50px 25px;
+
+
+  /*
+    Animasi hanya untuk CONTENT.
+    Background tidak ikut bergerak.
+  */
+
+  animation:
+    contentFadeIn
+    1.5s
+    ease
+    both;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo-container {
+
+  width:
+    min(190px, 46vw);
+
+  aspect-ratio:
+    1 / 1;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  margin-bottom:
+    8px;
+
+}
+
+
+.wedding-logo {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    contain;
+
+  display:
+    block;
+
+  filter:
+    drop-shadow(
+      0 5px 18px
+      rgba(225, 186, 96, .22)
+    );
+
+  animation:
+    logoAppear
+    1.6s
+    ease
+    .2s
+    both;
+
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.small-title {
+
+  color:
+    var(--gold-light);
+
+  font-size:
+    9px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    .42em;
+
+  margin-top:
+    3px;
+
+  margin-left:
+    .42em;
+
+  animation:
+    textAppear
+    1.2s
+    ease
+    .4s
+    both;
+
+}
+
+
+/* =========================================================
+   NAMA PENGANTIN
+========================================================= */
+
+.couple-name {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    baseline;
+
+  flex-wrap:
+    wrap;
+
+  margin-top:
+    13px;
+
+  color:
+    var(--gold-light);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(48px, 11vw, 72px);
+
+  font-weight:
+    500;
+
+  line-height:
+    .9;
+
+  text-shadow:
+    0 2px 18px
+    rgba(225, 186, 96, .12);
+
+  animation:
+    nameAppear
+    1.3s
+    ease
+    .5s
+    both;
+
+}
+
+
+.couple-name span {
+
+  display:
+    inline-block;
+
+}
+
+
+.ampersand {
+
+  font-size:
+    .55em;
+
+  font-style:
+    italic;
+
+  font-weight:
+    400;
+
+  margin:
+    0 8px;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  width:
+    min(190px, 55vw);
+
+  margin-top:
+    17px;
+
+  margin-bottom:
+    18px;
+
+}
+
+
+.divider span {
+
+  flex:
+    1;
+
+  height:
+    1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(225,186,96,.8)
+    );
+
+}
+
+
+.divider span:last-child {
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(225,186,96,.8),
+      transparent
+    );
+
+}
+
+
+.divider b {
+
+  color:
+    var(--gold);
+
+  font-size:
+    13px;
+
+  font-weight:
+    400;
+
+}
+
+
+/* =========================================================
+   GUEST
+========================================================= */
+
+.guest-section {
+
+  animation:
+    textAppear
+    1.2s
+    ease
+    .7s
+    both;
+
+}
+
+
+.guest-label {
+
+  color:
+    rgba(247,240,223,.72);
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    .24em;
+
+}
+
+
+.guest-name {
+
+  min-height:
+    28px;
+
+  margin-top:
+    5px;
+
+  color:
+    #fff4d9;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    25px;
+
+  font-weight:
+    600;
+
+}
+
+
+/* =========================================================
+   INVITATION TEXT
+========================================================= */
+
+.invitation-text {
+
+  margin-top:
+    14px;
+
+  max-width:
+    430px;
+
+  color:
+    rgba(247,240,223,.76);
+
+  font-size:
+    10px;
+
+  line-height:
+    1.9;
+
+  letter-spacing:
+    .035em;
+
+  animation:
+    textAppear
+    1.2s
+    ease
+    .85s
+    both;
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.open-button {
+
+  position:
+    relative;
+
+  width:
+    min(235px, 75vw);
+
+  height:
+    54px;
+
+  margin-top:
+    28px;
+
+  border:
+    1px solid
+    rgba(225,186,96,.95);
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(7, 24, 39, .72);
+
+  color:
+    var(--gold-light);
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+
+  letter-spacing:
+    .22em;
+
+  cursor:
+    pointer;
+
+  transition:
+    all
+    .35s
+    ease;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0,0,0,.22);
+
+  animation:
+    buttonAppear
+    1.3s
+    ease
+    1s
+    both;
+
+}
+
+
+/* Inner border */
+
+.open-button::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    4px;
+
+  border:
+    1px solid
+    rgba(225,186,96,.22);
+
+  border-radius:
+    inherit;
+
+  pointer-events:
+    none;
+
+}
+
+
+.open-button span {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+}
+
+
+.open-button strong {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  margin-left:
+    9px;
+
+  font-size:
+    18px;
+
+  font-weight:
+    400;
+
+}
+
+
+/* Hover */
+
+.open-button:hover {
+
+  transform:
+    translateY(-2px);
+
+  background:
+    rgba(225,186,96,.13);
+
+  box-shadow:
+    0 10px 35px
+    rgba(225,186,96,.15);
+
+}
+
+
+/* Click */
+
+.open-button:active {
+
+  transform:
+    scale(.97);
+
+}
+
+
+/* =========================================================
+   HINT
+========================================================= */
+
+.button-hint {
+
+  margin-top:
+    10px;
+
+  color:
+    rgba(247,240,223,.38);
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    .12em;
+
+  animation:
+    textAppear
+    1.2s
+    ease
+    1.1s
+    both;
+
+}
+
+
+/* =========================================================
+   BOTTOM DECORATION
+========================================================= */
+
+.bottom-decoration {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  width:
+    min(220px, 60vw);
+
+  margin-top:
+    22px;
+
+  opacity:
+    .5;
+
+}
+
+
+.bottom-decoration span {
+
+  flex:
+    1;
+
+  height:
+    1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold)
+    );
+
+}
+
+
+.bottom-decoration span:last-child {
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      transparent
+    );
+
+}
+
+
+.bottom-decoration small {
+
+  color:
+    var(--gold);
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    .45em;
+
+  white-space:
+    nowrap;
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+
+/*
+  Background TIDAK mempunyai animation.
+*/
+
+
+@keyframes contentFadeIn {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(15px);
+
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+@keyframes logoAppear {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      scale(.82);
+
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      scale(1);
+
+  }
+
+}
+
+
+@keyframes textAppear {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(10px);
+
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+@keyframes nameAppear {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(15px)
+      scale(.96);
+
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+
+@keyframes buttonAppear {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(15px);
+
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .invitation-content {
+
+    width:
+      100%;
+
+    padding:
+      35px 20px;
+
+  }
+
+
+  .logo-container {
+
+    width:
+      min(165px, 43vw);
+
+  }
+
+
+  .couple-name {
+
+    font-size:
+      clamp(44px, 12vw, 62px);
+
+  }
+
+
+  .invitation-text {
+
+    font-size:
+      9.5px;
+
+    line-height:
+      1.8;
+
+  }
+
+
+  .open-button {
+
+    width:
+      min(230px, 72vw);
+
+  }
+
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .logo-container {
+
+    width:
+      145px;
+
+  }
+
+
+  .small-title {
+
+    font-size:
+      8px;
+
+  }
+
+
+  .couple-name {
+
+    font-size:
+      43px;
+
+  }
+
+
+  .guest-name {
+
+    font-size:
+      23px;
+
+  }
+
+
+  .invitation-text {
+
+    font-size:
+      8.5px;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation:
+      none !important;
+
+    transition:
+      none !important;
+
+  }
+
+}

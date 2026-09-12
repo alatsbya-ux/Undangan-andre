@@ -1,0 +1,9 @@
+{
+  "name": "Andre & Intan — Wedding Invitation",
+  "short_name": "Andre & Intan",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "background_color": "#071827",
+  "theme_color": "#071827",
+  "orientation": "portrait"
+}
